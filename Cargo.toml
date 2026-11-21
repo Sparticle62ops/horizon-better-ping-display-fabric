@@ -1,12 +1,15 @@
 [package]
-name = "horizon-mod-better-ping-display"
-version = "0.1.0"
-edition = "2024"
+name = "mod-better-ping-display"
+version = "1.0.0"
+edition = "2021"
 license = "MIT"
 publish = false
-description = "Slice 1 of a Horizon port of Better Ping Display: ping sampling, smoothing, coloring and the player-list entry model."
+description = "Better Ping Display, a native mod: the numeric ping next to each entry in the player list. 1:1 port of vladmarica/better-ping-display-fabric (MIT)."
+
+[dependencies]
+horizon-mod-api = { path = ".horizon/sdk/api/crates/horizon-mod-api" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
 
 [lib]
 path = "src/lib.rs"
-
-[workspace]
